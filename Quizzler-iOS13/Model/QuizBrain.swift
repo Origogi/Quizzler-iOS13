@@ -10,28 +10,35 @@ import Foundation
 
 struct QuizBrain {
     let quiz = [
-        Question(text: "A slug's blood is green.", answser: "True"),
-        Question(text: "Approximately one quarter of human bones are in the feet.", answser: "True"),
-        Question(text: "The total surface area of two human lungs is approximately 70 square metres.", answser: "True"),
-        Question(text: "In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.", answser: "True"),
-        Question(text: "In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.", answser: "False"),
-        Question(text: "It is illegal to pee in the Ocean in Portugal.", answser: "True"),
-        Question(text: "You can lead a cow down stairs but not up stairs.", answser: "False"),
-        Question(text: "Google was originally called 'Backrub'.", answser: "True"),
-        Question(text: "Buzz Aldrin's mother's maiden name was 'Moon'.", answser: "True"),
-        Question(text: "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.", answser: "False"),
-        Question(text: "No piece of square dry paper can be folded in half more than 7 times.", answser: "False"),
-        Question(text: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", answser: "True")
+        Question(text: "Which is the largest organ in the human body?", answsers: ["Heart", "Skin", "Large Intestine"], correnctAnswer: "Skin"),
+        Question(text: "Five dollars is worth how many nickels?", answsers: ["25", "50", "100"], correnctAnswer: "100"),
+        Question(text: "What do the letters in the GMT time zone stand for?", answsers: ["Global Meridian Time", "Greenwich Mean Time", "General Median Time"], correnctAnswer: "Greenwich Mean Time"),
+        Question(text: "What is the French word for 'hat'?", answsers: ["Chapeau", "Écharpe", "Bonnet"], correnctAnswer: "Chapeau"),
+        Question(text: "In past times, what would a gentleman keep in his fob pocket?", answsers: ["Notebook", "Handkerchief", "Watch"], correnctAnswer: "Watch"),
+        Question(text: "How would one say goodbye in Spanish?", answsers: ["Au Revoir", "Adiós", "Salir"], correnctAnswer: "Adiós"),
+        Question(text: "Which of these colours is NOT featured in the logo for Google?", answsers: ["Green", "Orange", "Blue"], correnctAnswer: "Orange"),
+        Question(text: "What alcoholic drink is made from molasses?", answsers: ["Rum", "Whisky", "Gin"], correnctAnswer: "Rum"),
+        Question(text: "What type of animal was Harambe?", answsers: ["Panda", "Gorilla", "Crocodile"], correnctAnswer: "Gorilla"),
+        Question(text: "Where is Tasmania located?", answsers: ["Indonesia", "Australia", "Scotland"], correnctAnswer: "Australia")
     ]
 
     var questionNumber = 0
+    var currentScore = 0
 
-    func checkAnswer(_ answer: String) -> Bool {
-        return answer == quiz[questionNumber].answser
+    mutating func checkAnswer(_ answer: String) -> Bool {
+        let result = (answer == quiz[questionNumber].correnctAnswer)
+        if result {
+            currentScore += 1
+        }
+        return result
     }
 
     func getQuestionText() -> String {
         return quiz[questionNumber].text
+    }
+
+    func getAnswsers() -> [String] {
+        return quiz[questionNumber].answsers
     }
 
     func getProgress() -> Float {
@@ -44,6 +51,11 @@ struct QuizBrain {
         }
         else {
             questionNumber = 0
+            currentScore = 0
         }
+    }
+
+    func getScore() -> Int {
+        return currentScore
     }
 }

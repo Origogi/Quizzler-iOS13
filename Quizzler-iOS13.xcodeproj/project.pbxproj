@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		660E7DF124384B8500C7EBD0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660E7DF024384B8500C7EBD0 /* Question.swift */; };
 		66DEAA072438668D00B4D464 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DEAA062438668D00B4D464 /* QuizBrain.swift */; };
+		66DEAA09243882C800B4D464 /* output.gif in Resources */ = {isa = PBXBuildFile; fileRef = 66DEAA08243882C800B4D464 /* output.gif */; };
 		AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */; };
 		AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */; };
 		AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4D22D878BA005BA4CC /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		660E7DF024384B8500C7EBD0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		66DEAA062438668D00B4D464 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
+		66DEAA08243882C800B4D464 /* output.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = output.gif; sourceTree = "<group>"; };
 		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				AD7631B522F9851900C6E71B /* README.md */,
 				AD4BDE4822D878BA005BA4CC /* Quizzler-iOS13 */,
 				AD4BDE4722D878BA005BA4CC /* Products */,
+				66DEAA08243882C800B4D464 /* output.gif */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +164,7 @@
 				AD4BDE5622D878BC005BA4CC /* LaunchScreen.storyboard in Resources */,
 				AD4BDE5322D878BC005BA4CC /* Assets.xcassets in Resources */,
 				AD7631B622F9851900C6E71B /* README.md in Resources */,
+				66DEAA09243882C800B4D464 /* output.gif in Resources */,
 				AD4BDE5122D878BA005BA4CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
