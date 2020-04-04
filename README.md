@@ -11,5 +11,5 @@ You will program a trivia quiz app. If you have another field of expertise such 
 ## Output
 
 <div align="center">
-   <src="output.gif"/>
+   <img src="./output.gif"/>
 </div>
