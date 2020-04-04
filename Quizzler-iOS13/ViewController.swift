@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var trueButton: UIButton!
     @IBOutlet var falseButton: UIButton!
+    @IBOutlet var progressView: UIProgressView!
 
     var question = 0
 
@@ -41,10 +42,10 @@ class ViewController: UIViewController {
         let actualAnswer = quiz[question].answser
 
         if userAnswer == actualAnswer {
-            print("right!")
+            sender.backgroundColor = UIColor.green
         }
         else {
-            print("Wrong!")
+            sender.backgroundColor = UIColor.red
         }
 
         if question < quiz.count - 1 {
@@ -59,5 +60,19 @@ class ViewController: UIViewController {
 
     func updateUI() {
         questionLabel.text = quiz[question].text
+
+        let progress = (Float(question) + 1) / Float(quiz.count)
+        var animated = true
+
+        if question == 0 {
+            animated = false
+        }
+
+        progressBar.setProgress(progress, animated: animated)
+
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (_: Timer) in
+            self.falseButton.backgroundColor = UIColor.clear
+            self.trueButton.backgroundColor = UIColor.clear
+        }
     }
 }
